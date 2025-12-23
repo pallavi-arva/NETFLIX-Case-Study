@@ -1,47 +1,32 @@
-Business Context
-The retail sector is currently facing stagnant growth and declining engagement. This project addresses these challenges by transforming raw transaction data into strategic insights. The goal is to move away from "one-size-fits-all" marketing and toward data-driven decision-making.
+<p align="center">
+<img width="1335" height="654" alt="dashboard" src="https://github.com/user-attachments/assets/adf667b9-c2af-4247-a3c6-b9cfbf4fd4b8" />
+</p>
 
-Project Objectives
-Product Performance Audit: Identify "Star" products and "Underperformers" to streamline inventory costs and focus marketing spend.
+This project presents an interactive Power BI dashboard that analyzes Netflix's extensive library of over 8,800 movies and TV shows. By transforming raw data into visual insights, the dashboard explores content distribution, regional availability, and maturity rating trends to understand how Netflix’s catalog has evolved over the years.
 
-Behavioral Customer Segmentation: Categorize the customer base into actionable segments (No Orders, Low, Mid, and High-Value) based on purchase volume.
+Technical Workflow
+Data Cleaning (Power Query): Handled missing values in Director, Cast, and Country columns. Standardized the Date Added field and extracted the Month and Year for temporal analysis.
 
-Loyalty & Retention Analysis: Uncover repeat purchase patterns to build a framework for long-term customer loyalty.
+Data Modeling: Established relationships between content types, genres, and ratings.
 
-Data Architecture
-The analysis is built upon three core relational datasets:
+Feature Engineering (DAX): * Created measures for Total Titles, Total Movies, and Total TV Shows.
 
-Sales Transactions: Granular record of IDs, quantities, dates, and pricing.
+Developed a "Rating Category" metric to group content into Adult, Teen, and Kids segments.
 
-Customer Profiles: Demographic data including age, gender, location, and tenure.
+Visual Design: Implemented a dark-themed UI consistent with Netflix's brand identity.
 
-Product Inventory: Catalog details including categories and current stock levels.
+Key Insights & Visualizations
+Content Split: A donut chart showing the 70/30 split between Movies and TV Shows.
 
-Methodology & Technical Approach
-1. Data Engineering & SQL Cleaning
-Utilized advanced SQL queries to handle missing values and ensure data consistency across transaction and inventory tables.
+Global Footprint: A filled map visual highlighting content production by country (USA and India being major contributors).
 
-Performed Exploratory Data Analysis (EDA) to establish baseline metrics for monthly sales and active user counts.
+Growth Trends: A line chart depicting the massive surge in content added to the platform after 2015.
 
-2. Strategic Customer Segmentation
-I implemented a volume-based segmentation logic to differentiate the customer base:
+Genre Popularity: A bar chart identifying "International Movies" and "Dramas" as the most frequent genres.
 
-High Value (>30 units): Primary targets for loyalty programs and early access.
+Maturity Ratings: A treemap analyzing the dominance of TV-MA and TV-14 ratings, indicating a lean toward adult and teen audiences.
 
-Mid (10-30 units): Potential "High Value" candidates through upselling.
+Business Recommendations
+Diversify Genres: While Dramas are dominant, there is a growing trend in "Documentaries" that could be leveraged for niche market growth.
 
-Low (1-10 units): Targets for re-engagement and discount-driven conversions.
-
-No Orders (0 units): Analysis of "churn at entry" or sign-up-only users.
-
-3. Product & Inventory Optimization
-Performance Variability: Ranked products by revenue vs. quantity to identify high-margin vs. high-volume items.
-
-Stock Alignment: Cross-referenced sales velocity with inventory levels to prevent "Out of Stock" scenarios for top-performing products.
-
-Impact & Recommendations
-Targeted Marketing: Enabled the marketing team to design specific campaigns for the "High Value" segment, increasing ROI on ad spend.
-
-Inventory Efficiency: Provided a data-backed list of products for clearance to free up warehouse space for high-demand categories.
-
-Retention Strategy: Identified the "loyalty threshold"—the number of purchases after which a customer is 80% likely to return.
+Targeted Regional Content: Since North America is saturated, focusing on local-language content in Asia and Europe (as shown in the geographic map) is key to subscriber retention.
